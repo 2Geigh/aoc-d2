@@ -78,11 +78,14 @@ def isSafe(report: [int]) -> bool:
 
 file = open('./input')
 
+safeLevels = 0
 for report in file:
     levels = []
     for char in report:
         if char.strip() != "":
             levels.append(int(char))
-    print(levels)
+    if isSafe(levels):
+        safeLevels += 1
 
+print(safeLevels)
 file.close()
