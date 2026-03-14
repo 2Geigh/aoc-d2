@@ -1,5 +1,5 @@
 # Hello
 
-My final correct answer was 598 safe levels.
+My final correct answer was 598 safe reports in the `input` file.
 
-See [**index.py**](https://github.com/2Geigh/aoc-d2/blob/main/index.py) for my solutions.
+See [**`index.py`**](https://github.com/2Geigh/aoc-d2/blob/main/index.py) for my solutions.
