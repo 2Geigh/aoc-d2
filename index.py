@@ -34,7 +34,7 @@ def isSafe(report: [int]) -> bool:
     if len(report) < 2:
         return false
 
-    if len(report < 3):
+    if len(report) < 3:
         if report[0] == report [1]:
             return false
 
