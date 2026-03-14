@@ -72,6 +72,8 @@ def isSafe(report: [int]) -> bool:
         elif wasDecreasing and isDecreasing:
             return True
 
+        i += 1
+
     return False
 
 file = open('./input')
