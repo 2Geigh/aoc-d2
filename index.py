@@ -67,14 +67,14 @@ def isSafe(report: [int]) -> bool:
         isDecreasing = difNextCurr < 0
 
         # Condition 2
-        if wasIncreasing and isIncreasing:
-            return True
-        elif wasDecreasing and isDecreasing:
-            return True
+        if wasIncreasing and isDecreasing:
+            return False
+        elif wasDecreasing and isIncreasing:
+            return False
 
         i += 1
 
-    return False
+    return True
 
 file = open('./input')
 
@@ -84,6 +84,7 @@ for report in file:
     for char in report:
         if char.strip() != "":
             levels.append(int(char))
+
     if isSafe(levels):
         safeLevels += 1
 
