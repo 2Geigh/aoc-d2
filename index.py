@@ -31,6 +31,8 @@ def isSafe(report: [int]) -> bool:
 
     """
 
+    print(report)
+
     if len(report) < 2:
         return False
 
@@ -39,13 +41,21 @@ def isSafe(report: [int]) -> bool:
             return False
 
     i = 1
-    while (i < len(report) - 1):
+    numberOfLevels = len(report)
+    print('numberOfLevels', numberOfLevels)
+    while (i < numberOfLevels - 1):
+        print('i',i)
         previous = report[i-1]
         current = report[i]
         nextItem = report[i+1]
+        print('previous:', previous)
+        print('current:', current)
+        print('nextItem:', nextItem)
 
         difNextCurr = nextItem - current
         difCurrPrev = current - previous
+        print('difNextCurr', difNextCurr)
+        print('difCurrPrev', difCurrPrev)
 
         # Condition 1
         if abs(difCurrPrev) > 3:
@@ -82,9 +92,9 @@ safeLevels = 0
 for report in file:
     levels = []
     for char in report:
-        if char.strip() != "":
-            levels.append(int(char))
+        levels = [int(x) for x in report.split()]
 
+    print(levels,isSafe(levels))
     if isSafe(levels):
         safeLevels += 1
 
