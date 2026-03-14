@@ -34,8 +34,12 @@ def isSafe(report: [int]) -> bool:
     if len(report) < 2:
         return false
 
+    if len(report < 3):
+        if report[0] == report [1]:
+            return false
+
     i = 1
-    while (i < len(report)):
+    while (i < len(report) - 1):
         previous = report[i-1]
         current = report[i]
         nextItem = report[i+1]
