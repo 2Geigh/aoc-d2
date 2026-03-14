@@ -9,34 +9,34 @@ def isSafe(report: [int]) -> bool:
     EXAMPLES:
 
     >>> isSafe([])
-    false
+    False
 
     >>> isSafe([99])
-    false
+    False
 
     >>> isSafe([0, 0])
-    false
+    False
 
     >>> isSafe([0, 3])
-    true
+    True
 
     >>> isSafe([3, 0])
-    true
+    True
 
     >>> isSafe([0, 1, 0])
-    false
+    False
 
     >>> isSafe([0, 4])
-    false
+    False
 
     """
 
     if len(report) < 2:
-        return false
+        return False
 
     if len(report) < 3:
         if report[0] == report [1]:
-            return false
+            return False
 
     i = 1
     while (i < len(report) - 1):
@@ -49,15 +49,15 @@ def isSafe(report: [int]) -> bool:
 
         # Condition 1
         if abs(difCurrPrev) > 3:
-            return false
+            return False
         elif abs(difCurrPrev) < 1:
-            return false
+            return False
 
         # Condition 1
         if abs(difNextCurr) > 3:
-            return false
+            return False
         elif abs(difNextCurr) < 1:
-            return false
+            return False
 
         # We can infer these conditions because we already filtered out
         # constant element pairs with pairs with condition 1
@@ -68,11 +68,11 @@ def isSafe(report: [int]) -> bool:
 
         # Condition 2
         if wasIncreasing and isIncreasing:
-            return true
+            return True
         elif wasDecreasing and isDecreasing:
-            return true
+            return True
 
-    return false
+    return False
 
 file = open('./input')
 
